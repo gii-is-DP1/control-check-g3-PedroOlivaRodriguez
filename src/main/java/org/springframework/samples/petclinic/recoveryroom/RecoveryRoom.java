@@ -21,6 +21,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "recovery_room")
 public class RecoveryRoom extends BaseEntity{
+	
 	@NotNull
 	@Size(min = 3, max = 50)
     String name;
@@ -32,7 +33,7 @@ public class RecoveryRoom extends BaseEntity{
 	@NotNull
     boolean secure;
 	
-	@Transient
+	
     @ManyToOne
     @NotNull
     @JoinColumn(name = "room_type_id")
